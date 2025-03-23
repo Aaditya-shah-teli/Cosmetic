@@ -13,7 +13,7 @@ export const Main = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get("http://makeup-api.herokuapp.com/api/v1/products.json");
+                const response = await axios.get("https://makeup-api.herokuapp.com/api/v1/products.json");
                 setAllData(response.data); // Store full data
                 setFilteredData(response.data); // Initially, show all data
             } catch (error) {
