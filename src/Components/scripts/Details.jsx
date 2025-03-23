@@ -13,7 +13,7 @@ export const Details = () => {
     useEffect(() => {
         const fetchProduct = async () => {
             try {
-                const response = await axios.get(`http://makeup-api.herokuapp.com/api/v1/products/${id}.json`);
+                const response = await axios.get(`https://makeup-api.herokuapp.com/api/v1/products/${id}.json`);
                 setProduct(response.data);
             } catch (error) {
                 console.error("Error fetching product details:", error);
