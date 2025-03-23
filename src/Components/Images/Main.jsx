@@ -1,3 +1,9 @@
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import { Loading } from '../SideEffects/Loading';
+import { Error } from '../SideEffects/Error';
+import { NavLink } from 'react-router-dom';
+
 export const Main = () => {
     const [allData, setAllData] = useState([]);
     const [filteredData, setFilteredData] = useState([]);
@@ -81,7 +87,7 @@ export const Main = () => {
                         <h1 className="text-center text-xl font-bold text-gray-800 mb-2">{item.name}</h1>
                         <img 
                             className="w-full h-72 object-cover rounded-lg" 
-                            src={item.image_link || "fallback-image-url.jpg"} 
+                            src={item.image_link || "https://via.placeholder.com/150"} 
                             alt={item.name || "Product Image"} 
                         />
                         <p className='text-gray-600 mt-3 font-medium'>Brand: <span className='text-gray-900 font-semibold'>{item.brand || "Unknown"}</span></p>
